@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1 style="text-align: center; color: #333;">EDUCATIONAL ID'S GENERATION</h1>
+
+<form id="studentForm" style="display: flex; flex-direction: column; width: 300px; margin: auto; padding: 20px; background-color: #f2f2f2; border-radius: 5px;">
+    <label for="photo" id="photoLabel" style="width: 100px; height: 100px; border: 2px solid #000; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; margin-bottom: 10px; position: relative;">
+        <span style="font-size: 24px;">+</span>
+        <span id="selectedFileName" style="position: absolute; bottom: 10px; font-size: 12px; color: #333;">Add Photo</span>
+    </label>    
+<input type="file" id="photo" accept="image/*" style="display: none;">
+<input type="text" id="college" placeholder="College" style="margin-bottom: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+<input type="text" id="name" placeholder="Name" style="margin-bottom: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+<input type="text" id="rollNo" placeholder="Roll No" style="margin-bottom: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+<input type="text" id="department" placeholder="Department" style="margin-bottom: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+<input type="text" id="batch" placeholder="Batch" style="margin-bottom: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+<button type="submit" style="padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px; transition: all 0.3s ease;">Generate ID Card</button>
+</form>
+
+<div id="idCard" style="display: none; border: 1px solid #000; padding: 20px; margin: 20px auto; width: 300px; background-color: #f2f2f2; border-radius: 5px; text-align: center;">
+<h2 id="idCollege" style="margin: 0; padding: 0; color: #333;"></h2>
+<h3 style="margin: 0; padding: 0; color: #333;">Student ID Card</h3>
+<img id="idPhoto" style="width: 1.5in; height: 2in; object-fit: cover;">
+<h2 id="idName" style="margin: 0; padding: 0; color: #333;"></h2>
+<p id="idRollNo" style="margin: 0; padding: 0; color: #333;"></p>
+<p id="idDepartment" style="margin: 0; padding: 0; color: #333;"></p>
+<p id="idBatch" style="margin: 0; padding: 0; color: #333;"></p>
+<br>
+<div id="qrcode" style="display: flex; justify-content: center;"></div>
+</div>
+
+<center><button id="downloadButton" onclick="download()" style="display: none; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px; transition: all 0.3s ease;">Download</button></center>
+
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
